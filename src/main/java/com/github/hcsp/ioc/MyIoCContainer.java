@@ -43,7 +43,7 @@ public class MyIoCContainer {
             });
         } catch (Exception e) {
             e.printStackTrace();
-            throw new RuntimeException();
+            throw new RuntimeException(e);
         }
 
     }
@@ -61,7 +61,7 @@ public class MyIoCContainer {
                 field.set(beanInstance, dependencyBeanInstance);
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
-                throw new RuntimeException();
+                throw new RuntimeException(e);
             }
         });
     }
